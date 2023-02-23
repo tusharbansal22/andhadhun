@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser'); 
 const app = express();
 const connectDb = require('./db.js')
-const peopleRoutes = require('./controllers/people.controller')
+const peopleRoutes = require('./controllers/andhadhun.controller')
 app.use(bodyParser.json())
 app.use('/api/peoples', peopleRoutes)
 // app.use(errorHandler)
