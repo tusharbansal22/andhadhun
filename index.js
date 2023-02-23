@@ -2,9 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser'); 
 const app = express();
 const connectDb = require('./db.js')
-const peopleRoutes = require('./controllers/andhadhun.controller')
+const andhadhunRoutes = require('./controllers/andhadhun.controller')
 app.use(bodyParser.json())
-app.use('/api/peoples', peopleRoutes)
+app.use('/api/peoples', andhadhunRoutes)
 // app.use(errorHandler)
 app.use(bodyParser.urlencoded({
     extended:true
