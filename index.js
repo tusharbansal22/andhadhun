@@ -5,7 +5,12 @@ const connectDb = require('./db.js')
 const peopleRoutes = require('./controllers/people.controller')
 app.use(bodyParser.json())
 app.use('/api/peoples', peopleRoutes)
-app.use(errorHandler)
+// app.use(errorHandler)
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
 connectDb()
     .then(() => {
         console.log('db connection succeeded.')
